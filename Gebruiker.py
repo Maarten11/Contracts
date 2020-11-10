@@ -1,57 +1,32 @@
-# Gebruiker management
+from random import randint
+from copy import deepcopy
 
 class Gebruiker:
-    def __init__(self, fname, lname, email):
-        '''
-        :param fname: firstname (str)
-        :param lname: lastname (str)
-        :param email: (str)
-        :return succes: bool,duidt aan of het toevoegen gelukt is
-        '''
+    # Contract voor Gebruiker
+    def __init__(self, voornaam, achternaam, email, wachtwoord):
+        self.gebruikersLijst = []
+        self.voornaam = voornaam
+        self.achternaam = achternaam
+
+
+    def addGebruiker(self, voornaam, achternaam, email, wachtwoord):
+        """
+        Functie: add_gebruiker
+        Beschrijving: Voegt een gebruiker toe
+        Input Parameters en PreCondities:
+            :param id: int, dit getal is uniek en positief
+            :param voornaam: String, niet leeg
+            :param achternaam: String, niet leeg
+            :param email: String, niet leeg en bevat "@" en ".com" of een dergelijk adres
+            :param wachtwoord: String, niet leeg en controle op sterkte wachtwoord -> 8 tekens en combinatie letters + cijfers + hoofdletters
+        PostCondities:
+            Maakt een extra gebruiker aan
+        :return: None
+        """
         pass
 
-    def getFname(self):
-        '''
-        Vraagt voornaam op
-        :return fname: str
-        '''
+    def verwijderGebruiker(self):
         pass
 
-    def getLname(self):
-        '''
-        Vraagt achternaam op
-        :return lname: str
-        '''
+    def getID(self):
         pass
-
-    def getEmail(self):
-        '''
-        Vraagt email op
-        :return email: str
-        '''
-        pass
-
-    def changeFname(self, fname):
-        '''
-        Verander de voornaam van een user
-        :param fname: str
-        :return succes: bool duidt aan of het aanpassen gelukt is
-        '''
-        pass
-
-    def changeLname(self, lname):
-        '''
-        Verander de achternaam van een user
-        :param lname: str
-        :return succes: bool duidt aan of het aanpassen gelukt is
-        '''
-        pass
-
-    def changeMail(self, email):
-        '''
-        Verander de email van een user
-        :param email: str
-        :return succes: bool duidt aan of het aanpassen gelukt is
-        '''
-        pass
-
